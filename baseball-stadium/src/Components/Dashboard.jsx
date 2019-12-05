@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import count from "../Helpers/resetCounter";
 
 export default function Dashboard(props) {
   // const handleClick = () => {
@@ -8,11 +7,10 @@ export default function Dashboard(props) {
   // }
 
   function handleStrike() {
-    props.setStrikes(s => s + 1);
+    props.setStrikes();
   }
   function handleBalls(e) {
-    props.setBalls(s => s + 1);
-    console.log(e.target.name);
+    props.setBalls();
   }
   function handleFoul(e) {
     if (props.strikes < 2) {
